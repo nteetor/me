@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        font-size: 1.25rem;
+        border: 1px solid black;
+        border-collapse: collapse;
+        border-spacing: 0px;
+        counter-reset: day;
+      }
+
+      td {
+        padding: .25em .75em;
+        border: 1px solid black;
+      }
+
+      td::before {
+        vertical-align: super;
+        font-size: .5em;
+        padding-right: .5em;
+        counter-increment: day;
+        content: counter(day);
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="rest.html">Rest</a></td>
+          <td><a href="total-body.html">Total Body</a></td>
+          <td><a href="time-ladder.html">Time Ladder</a></td>
+          <td><a href="rest.html">Rest</a></td>
+          <td><a href="strong-core.html">Strong Core</a></td>
+          <td><a href="intervals.html">Intervals</a></td>
+          <td><a href="rest.html">Rest</a></td>
+        </tr>
+        <tr>
+          <td><a href="upper-body.html">Upper Body</a></td>
+          <td><a href="time-ladder.html">Time Ladder</a></td>
+          <td><a href="lower-body.html">Lower Body</a></td>
+          <td><a href="rest.html">Rest</a></td>
+          <td><a href="intervals.html">Intervals</a></td>
+          <td><a href="strong-core.html">Strong Core</a></td>
+          <td><a href="rest.html">Rest</a></td>
+        <tr>
+          <td><a href="tempo.html">Tempo</a></td>
+          <td><a href="total-body.html">Total Body</a></td>
+          <td><a href="time-ladder.html">Time Ladder</a></td>
+          <td><a href="rest.html">Rest</a></td>
+          <td><a href="lower-body.html">Lower Body</a></td>
+          <td><a href="intervals.html">Intervals</a></td>
+          <td><a href="strong-core.html">Strong Core</a></td>
+        </tr>
+        <tr>
+          <td><a href="rest.html">Rest</a></td>
+          <td><a href="upper-body.html">Upper Body</a></td>
+          <td><a href="lower-body.html">Lower Body</a></td>
+          <td><a href="tempo.html">Tempo</a></td>
+          <td><a href="total-body.html">Total Body</a></td>
+          <td><a href="strong-core.html">Strong Core</a></td>
+          <td><a href="time-ladder.html">Time Ladder</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      (function() {
+        let i = (new Date()).getDate();
+        let today = Array.prototype.slice.call(document.querySelectorAll("td"))[i];
+
+        today.style.background = "palegreen";
+        today.style.border = "turquoise";
+      })();
+    </script>
+  </body>
+</html>
